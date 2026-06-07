@@ -33,7 +33,6 @@ body::before{
   background:radial-gradient(circle,rgba(212,168,83,.04) 0%,transparent 70%);
   pointer-events:none;
 }
-/* Header */
 .top-bar{
   flex-shrink:0;z-index:200;
   background:rgba(12,11,10,.93);
@@ -50,19 +49,9 @@ body::before{
   color:var(--gold);flex-shrink:0;
 }
 .contact-info{flex:1;min-width:0}
-.contact-name{
-  font-family:'Syne',sans-serif;font-weight:700;font-size:.95rem;
-  color:var(--text);letter-spacing:-.01em;
-}
-.contact-num{
-  font-family:'JetBrains Mono',monospace;font-size:.62rem;
-  color:var(--text-mute);
-}
-.msg-count{
-  font-family:'JetBrains Mono',monospace;
-  font-size:.62rem;color:var(--text-mute);
-}
-/* Banner */
+.contact-name{font-family:'Syne',sans-serif;font-weight:700;font-size:.95rem;color:var(--text);letter-spacing:-.01em;}
+.contact-num{font-family:'JetBrains Mono',monospace;font-size:.62rem;color:var(--text-mute);}
+.msg-count{font-family:'JetBrains Mono',monospace;font-size:.62rem;color:var(--text-mute);}
 .note-banner{
   flex-shrink:0;
   background:linear-gradient(90deg,rgba(212,168,83,.06),transparent);
@@ -71,74 +60,36 @@ body::before{
   font-family:'JetBrains Mono',monospace;
   font-size:.6rem;color:var(--text-mute);letter-spacing:.04em;
 }
-/* Scroll pane */
-.thread-wrap{
-  flex:1;overflow:hidden;
-  display:flex;justify-content:center;
-}
+.thread-wrap{flex:1;overflow:hidden;display:flex;justify-content:center;}
 .thread{
   width:680px;max-width:100%;
   overflow-y:auto;overflow-x:hidden;
   padding:20px 1rem 28px;
   display:flex;flex-direction:column;gap:4px;
-  scrollbar-width:thin;
-  scrollbar-color:var(--border2) transparent;
+  scrollbar-width:thin;scrollbar-color:var(--border2) transparent;
 }
 .thread::-webkit-scrollbar{width:5px}
 .thread::-webkit-scrollbar-track{background:transparent}
 .thread::-webkit-scrollbar-thumb{background:var(--border2);border-radius:3px}
 .thread::-webkit-scrollbar-thumb:hover{background:var(--gold-dim)}
 .thread::-webkit-scrollbar-button{display:none;height:0}
-/* Date divider */
 .date-divider{
-  text-align:center;
-  font-family:'JetBrains Mono',monospace;
+  text-align:center;font-family:'JetBrains Mono',monospace;
   font-size:.58rem;color:var(--text-mute);
   letter-spacing:.08em;text-transform:uppercase;
   margin:14px 0 8px;position:relative;
 }
-.date-divider::before,.date-divider::after{
-  content:'';position:absolute;top:50%;
-  width:28%;height:1px;background:var(--border);
-}
-.date-divider::before{left:0}
-.date-divider::after{right:0}
-/* Bubbles */
+.date-divider::before,.date-divider::after{content:'';position:absolute;top:50%;width:28%;height:1px;background:var(--border);}
+.date-divider::before{left:0}.date-divider::after{right:0}
 .bubble-wrap{display:flex;flex-direction:column}
 .bubble-wrap.out{align-items:flex-end}
 .bubble-wrap.inc{align-items:flex-start}
-.bubble{
-  max-width:72%;padding:9px 13px;
-  border-radius:16px;
-  font-size:.88rem;line-height:1.55;
-  word-break:break-word;
-}
-.bubble.out{
-  background:var(--gold-dim);color:var(--text);
-  border-bottom-right-radius:4px;
-  border:1px solid rgba(212,168,83,.15);
-}
-.bubble.inc{
-  background:var(--surf2);color:var(--text);
-  border-bottom-left-radius:4px;
-  border:1px solid var(--border);
-}
-.bubble-time{
-  font-family:'JetBrains Mono',monospace;
-  font-size:.58rem;color:var(--text-mute);
-  margin-top:3px;padding:0 2px;
-}
+.bubble{max-width:72%;padding:9px 13px;border-radius:16px;font-size:.88rem;line-height:1.55;word-break:break-word;}
+.bubble.out{background:var(--gold-dim);color:var(--text);border-bottom-right-radius:4px;border:1px solid rgba(212,168,83,.15);}
+.bubble.inc{background:var(--surf2);color:var(--text);border-bottom-left-radius:4px;border:1px solid var(--border);}
+.bubble-time{font-family:'JetBrains Mono',monospace;font-size:.58rem;color:var(--text-mute);margin-top:3px;padding:0 2px;}
 .bubble-wrap.out .bubble-time{text-align:right}
-.attach-note{
-  font-family:'JetBrains Mono',monospace;
-  font-size:.68rem;color:var(--gold-dim);
-  font-style:italic;margin-top:4px;
-}
-.delivered{
-  font-family:'JetBrains Mono',monospace;
-  font-size:.58rem;color:var(--text-mute);
-  text-align:right;margin-top:2px;padding-right:2px;
-}
+.delivered{font-family:'JetBrains Mono',monospace;font-size:.58rem;color:var(--text-mute);text-align:right;margin-top:2px;padding-right:2px;}
 </style>
 </head>
 <body>
@@ -149,7 +100,7 @@ body::before{
     <div class="contact-name">+1 (917) 587-6707</div>
     <div class="contact-num">New York, NY &middot; 917</div>
   </div>
-  <div class="msg-count">36 messages</div>
+  <div class="msg-count">46 messages</div>
 </div>
 <div class="note-banner">This conversation with the corresponding number has been archived as a public record. Originally posted as supporting reference on mrnumber.com.</div>
 
@@ -162,22 +113,18 @@ body::before{
   <div class="bubble inc">Good morning I'm looking for now for 3 sum I love to watch for multiple hours let me know if you are available to travel</div>
   <div class="bubble-time">5:32 AM</div>
 </div>
-
 <div class="bubble-wrap out">
   <div class="bubble out">Yea where to?</div>
   <div class="bubble-time">5:32 AM</div>
 </div>
-
 <div class="bubble-wrap inc">
   <div class="bubble inc">I'm located in the Bronx</div>
   <div class="bubble-time">5:33 AM</div>
 </div>
-
 <div class="bubble-wrap inc">
   <div class="bubble inc">When can you be ready to come?</div>
   <div class="bubble-time">5:33 AM</div>
 </div>
-
 <div class="bubble-wrap out">
   <div class="bubble out">You sending a car?</div>
   <div class="bubble-time">5:33 AM</div>
@@ -189,443 +136,162 @@ body::before{
   <div class="bubble inc">Yes I can where are you located</div>
   <div class="bubble-time">5:34 AM</div>
 </div>
-
 <div class="bubble-wrap out">
   <div class="bubble out">I'm in Times Square bro..</div>
   <div class="bubble-time">5:36 AM</div>
 </div>
-
 <div class="bubble-wrap out">
   <div class="bubble out">I just woke up.. I'll take about an hour to be ready</div>
   <div class="bubble-time">5:36 AM</div>
 </div>
-
 <div class="bubble-wrap inc">
   <div class="bubble inc">Ok I'll send it if you are serious</div>
   <div class="bubble-time">5:37 AM</div>
 </div>
-
 <div class="bubble-wrap out">
   <div class="bubble out">I'm serious</div>
   <div class="bubble-time">5:39 AM</div>
 </div>
-
 <div class="bubble-wrap inc">
   <div class="bubble inc">Ok no problem</div>
   <div class="bubble-time">5:39 AM</div>
 </div>
-
 <div class="bubble-wrap out">
   <div class="bubble out">You serious?</div>
   <div class="bubble-time">5:39 AM</div>
 </div>
-
 <div class="bubble-wrap inc">
   <div class="bubble inc">Yes I am</div>
   <div class="bubble-time">5:41 AM</div>
 </div>
-
 <div class="bubble-wrap out">
   <div class="bubble out">Bet</div>
   <div class="bubble-time">5:42 AM</div>
 </div>
-
 <div class="bubble-wrap out">
   <div class="bubble out">6:35 I'll ready address is <strong>212 E 42nd St, New York, NY 10017</strong></div>
   <div class="bubble-time">5:43 AM</div>
 </div>
-
 <div class="bubble-wrap inc">
   <div class="bubble inc">Awesome</div>
   <div class="bubble-time">5:44 AM</div>
 </div>
-
 <div class="bubble-wrap inc">
   <div class="bubble inc">I Want You to Wear Your Slides With No Socks on</div>
   <div class="bubble-time">5:44 AM</div>
 </div>
-
 <div class="bubble-wrap out">
   <div class="bubble out">You still ain't ain't asked me about rates</div>
   <div class="bubble-time">5:49 AM</div>
 </div>
-
 <div class="bubble-wrap inc">
   <div class="bubble inc">How much for multiple hours?</div>
   <div class="bubble-time">5:52 AM</div>
 </div>
-
 <div class="bubble-wrap inc">
   <div class="bubble inc">Can you wear them?</div>
   <div class="bubble-time">5:52 AM</div>
 </div>
-
 <div class="bubble-wrap out">
   <div class="bubble out">I have both slide and socks on</div>
   <div class="bubble-time">5:54 AM</div>
 </div>
-
 <div class="bubble-wrap inc">
   <div class="bubble inc">WITHOUT SOCKS ON LOTION YOUR FEET UP PLEASE</div>
   <div class="bubble-time">5:57 AM</div>
 </div>
-
 <div class="bubble-wrap out">
   <div class="bubble out">My rate 400/hr for multiple I'll do 300</div>
   <div class="bubble-time">5:57 AM</div>
 </div>
-
 <div class="bubble-wrap inc">
   <div class="bubble inc">Ok that's fair can you do that?</div>
   <div class="bubble-time">5:59 AM</div>
 </div>
-
 <div class="bubble-wrap out">
   <div class="bubble out">Bet</div>
   <div class="bubble-time">6:12 AM</div>
 </div>
-
 <div class="bubble-wrap inc">
   <div class="bubble inc">Awesome</div>
   <div class="bubble-time">6:15 AM</div>
 </div>
-
 <div class="bubble-wrap out">
   <div class="bubble out">How many hours you talking bro?</div>
   <div class="bubble-time">6:23 AM</div>
 </div>
-
 <div class="bubble-wrap out">
   <div class="bubble out">I have Jordan's on, and run and change into my slides.</div>
   <div class="bubble-time">6:28 AM</div>
 </div>
-
 <div class="bubble-wrap out">
   <div class="bubble out"><strong>701 7th Ave, New York, NY 10036</strong></div>
   <div class="bubble-time">6:28 AM</div>
 </div>
-
 <div class="bubble-wrap out">
   <div class="bubble out">Should be ready in the next 10 min</div>
   <div class="bubble-time">6:28 AM</div>
 </div>
-
 <div class="bubble-wrap inc">
   <div class="bubble inc">Please slides no Socks on in car</div>
   <div class="bubble-time">6:29 AM</div>
 </div>
-
 <div class="bubble-wrap out">
   <div class="bubble out">Yea</div>
   <div class="bubble-time">6:30 AM</div>
 </div>
-
 <div class="bubble-wrap out">
   <div class="bubble out">Yes that's why I gave you the new address; I had to come here first to change</div>
   <div class="bubble-time">6:31 AM</div>
 </div>
-
 <div class="bubble-wrap inc">
   <div class="bubble inc">Ok u ready</div>
   <div class="bubble-time">6:33 AM</div>
 </div>
-
 <div class="bubble-wrap out">
   <div class="bubble out">Once I get dropped off I gotta go up 40 levels to grab my shit then I'll be ready</div>
   <div class="bubble-time">6:35 AM</div>
 </div>
-
 <div class="bubble-wrap inc">
   <div class="bubble inc">Send in 5 minutes</div>
   <div class="bubble-time">6:35 AM</div>
 </div>
-
 <div class="bubble-wrap out">
   <div class="bubble out">I appreciate it</div>
   <div class="bubble-time">6:36 AM</div>
 </div>
-
 <div class="bubble-wrap inc">
   <div class="bubble inc">?</div>
   <div class="bubble-time">6:39 AM</div>
 </div>
-
 <div class="bubble-wrap out">
   <div class="bubble out">5 min</div>
   <div class="bubble-time">6:39 AM</div>
 </div>
-
 <div class="bubble-wrap inc">
   <div class="bubble inc">Ok be outside</div>
   <div class="bubble-time">6:40 AM</div>
 </div>
-
 <div class="bubble-wrap out">
   <div class="bubble out">Headed back down elevator now</div>
   <div class="bubble-time">6:45 AM</div>
 </div>
-
 <div class="bubble-wrap inc">
   <div class="bubble inc">Here taxi Toyota Highlander</div>
   <div class="bubble-time">6:50 AM</div>
 </div>
-
 <div class="bubble-wrap out">
   <div class="bubble out">Ok</div>
   <div class="bubble-time">6:50 AM</div>
 </div>
-
 <div class="bubble-wrap out">
   <div class="bubble out">LP</div>
   <div class="bubble-time">6:51 AM</div>
 </div>
-
 <div class="bubble-wrap out">
   <div class="bubble out">What name do I tell them?</div>
   <div class="bubble-time">6:51 AM</div>
 </div>
-
-<div class="bubble-wrap out">
-  <div class="bubble out">I'm good bro</div>
-  <div class="bubble-time">7:09 AM</div>
-</div>
-<div class="delivered">Delivered 7:09 AM</div>
-
-</div>
-</div>
-
-<script>
-  var w = document.getElementById('tw');
-  w.scrollTop = w.scrollHeight;
-</script>
-</body>
-</html>
-
-<div class="bubble-wrap inc">
-  <div class="bubble inc">Good morning I'm looking for now for 3 sum I love to watch for multiple hours let me know if you are available to travel</div>
-  <div class="bubble-time">5:32 AM</div>
-</div>
-
-<div class="bubble-wrap out">
-  <div class="bubble out">Yea where to?</div>
-  <div class="bubble-time">5:32 AM</div>
-</div>
-
-<div class="bubble-wrap inc">
-  <div class="bubble inc">I'm located in the Bronx</div>
-  <div class="bubble-time">5:33 AM</div>
-</div>
-
-<div class="bubble-wrap inc">
-  <div class="bubble inc">When can you be ready to come?</div>
-  <div class="bubble-time">5:33 AM</div>
-</div>
-
-<div class="bubble-wrap out">
-  <div class="bubble out">You sending a car?</div>
-  <div class="bubble-time">5:34 AM</div>
-</div>
-
-<div class="bubble-wrap inc">
-  <div class="bubble inc">Yes I can where are you located</div>
-  <div class="bubble-time">5:34 AM</div>
-</div>
-
-<div class="bubble-wrap out">
-  <div class="bubble out">I'm in Times Square bro..</div>
-  <div class="bubble-time">5:34 AM</div>
-</div>
-
-<div class="bubble-wrap out">
-  <div class="bubble out">I just woke up.. I'll take about an hour to be ready</div>
-  <div class="bubble-time">5:35 AM</div>
-</div>
-
-<div class="bubble-wrap inc">
-  <div class="bubble inc">Ok I'll send it if you are serious</div>
-  <div class="bubble-time">5:36 AM</div>
-</div>
-
-<div class="bubble-wrap out">
-  <div class="bubble out">I'm serious</div>
-  <div class="bubble-time">5:36 AM</div>
-</div>
-
-<div class="bubble-wrap inc">
-  <div class="bubble inc">Ok no problem</div>
-  <div class="bubble-time">5:37 AM</div>
-</div>
-
-<div class="bubble-wrap out">
-  <div class="bubble out">You serious?</div>
-  <div class="bubble-time">5:38 AM</div>
-</div>
-
-<div class="bubble-wrap inc">
-  <div class="bubble inc">Yes I am</div>
-  <div class="bubble-time">5:38 AM</div>
-</div>
-
-<div class="bubble-wrap out">
-  <div class="bubble out">Bet</div>
-  <div class="bubble-time">5:39 AM</div>
-</div>
-
-<div class="bubble-wrap out">
-  <div class="bubble out">6:35 I'll ready address is <strong>212 E 42nd St, New York, NY 10017</strong></div>
-  <div class="bubble-time">5:40 AM</div>
-</div>
-
-<div class="bubble-wrap inc">
-  <div class="bubble inc">Awesome</div>
-  <div class="bubble-time">5:40 AM</div>
-</div>
-
-<div class="bubble-wrap inc">
-  <div class="bubble inc">I Want You to Wear Your Slides With No Socks on</div>
-  <div class="bubble-time">5:41 AM</div>
-</div>
-
-<div class="bubble-wrap out">
-  <div class="bubble out">You still ain't ain't asked me about rates</div>
-  <div class="bubble-time">5:42 AM</div>
-</div>
-
-<div class="bubble-wrap inc">
-  <div class="bubble inc">How much for multiple hours?</div>
-  <div class="bubble-time">5:42 AM</div>
-</div>
-
-<div class="bubble-wrap inc">
-  <div class="bubble inc">Can you wear them?</div>
-  <div class="bubble-time">5:43 AM</div>
-</div>
-
-<div class="bubble-wrap out">
-  <div class="bubble out">I have both slide and socks on</div>
-  <div class="bubble-time">5:43 AM</div>
-</div>
-
-<div class="bubble-wrap inc">
-  <div class="bubble inc">WITHOUT SOCKS ON LOTION YOUR FEET UP PLEASE</div>
-  <div class="bubble-time">5:44 AM</div>
-</div>
-
-<div class="bubble-wrap out">
-  <div class="bubble out">My rate 400/hr for multiple I'll do 300</div>
-  <div class="bubble-time">5:45 AM</div>
-</div>
-
-<div class="bubble-wrap inc">
-  <div class="bubble inc">Ok that's fair can you do that?</div>
-  <div class="bubble-time">5:46 AM</div>
-</div>
-
-<div class="bubble-wrap out">
-  <div class="bubble out">Bet</div>
-  <div class="bubble-time">5:46 AM</div>
-</div>
-
-<div class="bubble-wrap inc">
-  <div class="bubble inc">Awesome</div>
-  <div class="bubble-time">5:47 AM</div>
-</div>
-
-<div class="bubble-wrap out">
-  <div class="bubble out">How many hours you talking bro?</div>
-  <div class="bubble-time">6:10 AM</div>
-</div>
-
-<div class="bubble-wrap out">
-  <div class="bubble out">I have Jordan's on, and run and change into my slides.</div>
-  <div class="bubble-time">6:20 AM</div>
-</div>
-
-<div class="bubble-wrap out">
-  <div class="bubble out"><strong>701 7th Ave, New York, NY 10036</strong></div>
-  <div class="bubble-time">6:22 AM</div>
-</div>
-
-<div class="bubble-wrap out">
-  <div class="bubble out">Should be ready in the next 10 min</div>
-  <div class="bubble-time">6:22 AM</div>
-</div>
-
-<div class="bubble-wrap inc">
-  <div class="bubble inc">Please slides no Socks on in car</div>
-  <div class="bubble-time">6:23 AM</div>
-</div>
-
-<div class="bubble-wrap out">
-  <div class="bubble out">Yea</div>
-  <div class="bubble-time">6:24 AM</div>
-</div>
-
-<div class="bubble-wrap out">
-  <div class="bubble out">Yes that's why I gave you the new address; I had to come here first to change</div>
-  <div class="bubble-time">6:25 AM</div>
-</div>
-
-<div class="bubble-wrap inc">
-  <div class="bubble inc">Ok u ready</div>
-  <div class="bubble-time">6:50 AM</div>
-</div>
-
-<div class="bubble-wrap out">
-  <div class="bubble out">Once I get dropped off I gotta go up 40 levels to grab my sh*t then I'll be ready</div>
-  <div class="bubble-time">6:52 AM</div>
-</div>
-
-<div class="bubble-wrap inc">
-  <div class="bubble inc">Send in 5 minutes</div>
-  <div class="bubble-time">6:55 AM</div>
-</div>
-
-<div class="bubble-wrap out">
-  <div class="bubble out">I appreciate it</div>
-  <div class="bubble-time">6:56 AM</div>
-</div>
-
-<div class="bubble-wrap inc">
-  <div class="bubble inc">?</div>
-  <div class="bubble-time">7:00 AM</div>
-</div>
-
-<div class="bubble-wrap out">
-  <div class="bubble out">5 min</div>
-  <div class="bubble-time">7:01 AM</div>
-</div>
-
-<div class="bubble-wrap inc">
-  <div class="bubble inc">Ok be outside</div>
-  <div class="bubble-time">7:03 AM</div>
-</div>
-
-<div class="bubble-wrap out">
-  <div class="bubble out">Headed back down elevator now</div>
-  <div class="bubble-time">7:05 AM</div>
-</div>
-
-<div class="bubble-wrap inc">
-  <div class="bubble inc">Here taxi Toyota Highlander</div>
-  <div class="bubble-time">7:07 AM</div>
-</div>
-
-<div class="bubble-wrap out">
-  <div class="bubble out">Ok</div>
-  <div class="bubble-time">7:08 AM</div>
-</div>
-
-<div class="bubble-wrap out">
-  <div class="bubble out">LP</div>
-  <div class="bubble-time">7:08 AM</div>
-</div>
-
-<div class="bubble-wrap out">
-  <div class="bubble out">What name do I tell them?</div>
-  <div class="bubble-time">7:08 AM</div>
-</div>
-
 <div class="bubble-wrap out">
   <div class="bubble out">I'm good bro</div>
   <div class="bubble-time">7:09 AM</div>
